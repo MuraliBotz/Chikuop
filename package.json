@@ -1,0 +1,63 @@
+{
+  "name": "feathers-chat",
+  "description": "A FeathersJS chat application",
+  "version": "4.0.0",
+  "homepage": "https://feathersjs.com",
+  "main": "src",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "David Luecke",
+    "email": "daff@neyeon.com"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "src",
+    "test": "test/",
+    "config": "config/"
+  },
+  "engines": {
+    "npm": ">= 6.0.0"
+  },
+  "scripts": {
+    "test": "npm run eslint && npm run coverage",
+    "coverage": "nyc npm run mocha",
+    "eslint": "eslint src/. test/. --config .eslintrc.json",
+    "dev": "nodemon src/",
+    "start": "node src/",
+    "clean": "shx rm -rf test/data/",
+    "update-dependencies": "ncu -u",
+    "mocha": "npm run clean && NODE_ENV=test mocha test/ --recursive --exit"
+  },
+  "dependencies": {
+    "@feathersjs/authentication": "^4.5.11",
+    "@feathersjs/authentication-local": "^4.5.11",
+    "@feathersjs/authentication-oauth": "^4.5.11",
+    "@feathersjs/configuration": "^4.5.11",
+    "@feathersjs/errors": "^4.5.11",
+    "@feathersjs/express": "^4.5.11",
+    "@feathersjs/feathers": "^4.5.11",
+    "@feathersjs/socketio": "^4.5.11",
+    "compression": "^1.7.4",
+    "connect-mongo": "^4.6.0",
+    "cors": "^2.8.5",
+    "express-session": "^1.17.2",
+    "feathers-mongoose": "^8.5.1",
+    "helmet": "^4.6.0",
+    "mongoose": "^6.1.6",
+    "node-fetch": "^2.6.1",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "eslint": "^7.26.0",
+    "mocha": "^8.4.0",
+    "nodemon": "^2.0.7",
+    "npm-check-updates": "^11.5.11",
+    "nyc": "^15.1.0",
+    "shx": "^0.3.3"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "host": "EXTERNAL_HOSTNAME",
+  "port": "PORT",
+  "tlsEnabled": true
+}
